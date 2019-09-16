@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Etrade</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <! — Latest compiled and minified CSS →
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h1>
+        <a ><%= link_to "Marka", brands_path %></a>
+        <a><%= link_to "Ürün", products_path %></a>
+      </h1>
+    </div>
+    </br>
+
+    <%= yield %>
+  </body>
+</html>

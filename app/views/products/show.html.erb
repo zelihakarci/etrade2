@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ad:</strong>
+  <%= @product.product_name %>
+</p>
+
+<p>
+  <strong>Marka Id:</strong>
+  <%= @product.brand_id %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @product.model %>
+</p>
+
+<%= link_to 'Düzenle', edit_product_path(@product) %> |
+<%= link_to 'Geri', products_path %>

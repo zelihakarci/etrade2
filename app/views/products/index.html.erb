@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ürünler</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ad</th>
+      <th>Marka Id</th>
+      <th>Model</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.product_name %></td>
+        <td><%= product.brand_id %></td>
+        <td><%= product.model %></td>
+        <td><%= link_to 'Göster', product %></td>
+        <td><%= link_to 'Düzenle', edit_product_path(product) %></td>
+        <td><%= link_to 'Sil', product, method: :delete, data: { confirm: 'Emin misiniz ?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Yeni Ürün', new_product_path %>
